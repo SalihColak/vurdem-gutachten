@@ -291,7 +291,7 @@ export default function Home() {
                 src={bundesweit}
                 width={100}
                 height={100}
-                alt="Standorte"
+                alt="Bundesweit"
               />
               <h5 className="text-2xl font-bold mt-2">Bundesweit</h5>
               <p className="text-xl font-light">
@@ -300,7 +300,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6">
-              <Image src={immer} width={100} height={100} alt="Studenten" />
+              <Image
+                src={immer}
+                width={100}
+                height={100}
+                alt="24/7 erreichbar"
+              />
               <h5 className="text-2xl font-bold mt-2">24/7 erreichbar</h5>
               <p className="text-xl font-light">
                 Wir sind immer für Sie erreichbar, auch an Wochenenden und
