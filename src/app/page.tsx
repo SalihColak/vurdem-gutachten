@@ -62,7 +62,7 @@ export default function Home() {
             </NavbarLink>
           </NavbarCollapse>
         </Navbar> */}
-        <div className="navbar bg-base-100 sticky top-0 z-30 drawer">
+        <div className="navbar bg-base-100 fixed top-0 z-50 drawer">
           <div className="flex-1">
             <a className="text-xl cursor-pointer">
               <Image
@@ -330,6 +330,187 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <section className="flex flex-col items-center py-20 text-black relative">
+        <Image
+          src={"/image1.jpg"}
+          fill
+          alt="hg"
+          className="object-cover absolute top-0 left-0 w-full h-full blur-lg"
+        />
+        <div className="bg-[#1d232a] absolute top-0 left-0 w-full h-full opacity-90  z-10" />
+
+        <div className=" w-[1200px] h-[80%] top-60 blur-2xl bg-gradient-to-tr from-primary/10 to-orange-400/10 rounded-full absolute hidden xl:block" />
+        <h2 className="z-30 mb-20 text-4xl text-white font-medium">
+          Unsere Leistungen
+        </h2>
+        <div className="z-20 relative grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden ">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Unfallgutachten
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Wenn durch einen Unfall Schadensersatzansprüche entstehen,
+                    kann es ratsam sein, ein Gutachten erstellen zu lassen. Ein
+                    unabhängiger KFZ-Gutachter kann Ihnen schnelle und
+                    zuverlässige Auskunft darüber geben, wie hoch der
+                    Sachschaden ist.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Wertgutachten
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Ein Wertgutachten durch einen unabhängigen und neutralen
+                    Kfz-Sachverständigen bringt Ihnen eine realistische
+                    Einschätzung über den aktuellen Marktwert Ihres Fahrzeugs.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Leasingrücknahmen
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Ein Wertgutachten durch einen unabhängigen und neutralen
+                    Kfz-Sachverständigen bringt Ihnen eine realistische
+                    Einschätzung über den aktuellen Marktwert Ihres Fahrzeugs.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Vorschädenanalyse
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Bei einer Vorschadenanalyse überprüft der
+                    KFZ-Sachverständige das Fahrzeug auf bestehende und vor
+                    allem versteckte Schäden und Mängel. Bei der Anschaffung
+                    eines neuen Fahrzeugs ist es sinnvoll, das Fahrzeug
+                    überprüfen zu lassen, denn manchmal sind Vor- oder
+                    Altschäden nicht auf den ersten Blick erkennbar, können
+                    jedoch den Wert Ihres Fahrzeugs erheblich mindern.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Kurzgutachten
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Das Kurzgutachten ist weitgehend mit dem Kostenvoranschlag
+                    gleichzusetzen, unterscheidet sich jedoch sehr von einem
+                    normalen KFZ-Gutachten. Es wird zur Beweissicherung für die
+                    Versicherung verwendet, jedoch vor Gericht hat es keine
+                    Beweis sichernde Funktion.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-96  bg-white rounded-xl group">
+            <div className="w-full h-60 relative overflow-hidden">
+              <Image
+                src={"/haftpflicht.jpg"}
+                fill
+                alt="Unfallschaden"
+                className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
+              />
+            </div>
+            <div className="p-4 flex flex-col gap-2">
+              <details className="collapse collapse-arrow">
+                <summary className="collapse-title text-xl font-medium ">
+                  Reparaturbestätigungen
+                </summary>
+                <div className="collapse-content transition-all duration-300">
+                  <p>
+                    Damit Sie bei der Schadensregulierung auf der sicheren Seite
+                    sind, empfiehlt es sich oft, das Fahrzeug nach der Reparatur
+                    bei dem KFZ-Sachverständigen vorzuführen. Dieser kann
+                    überprüfen, ob alles, was Ihnen die Werkstatt in Rechnung
+                    gestellt hat, auch wirklich durchgeführt bzw. fachgerecht
+                    instand gesetzt wurde. Besonders wichtig ist Ihre
+                    Reparaturbestätigung durch Ihren Gutachter dann, wenn Sie
+                    die Reparatur Ihres Fahrzeugs in Eigenregie durchgeführt
+                    haben. Damit wir Ihren Nutzungsausfall bei der Versicherung
+                    des Verursachers geltend machen können.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="h-screen bg-white"></section>
     </main>
   );
 }
