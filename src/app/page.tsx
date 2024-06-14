@@ -193,12 +193,62 @@ export default function Home() {
         </motion.div> */}
       </div>
       <section className="h-screen bg-white relative">
-        <div className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-60 xl:right-24 xl:w-[600px] h-[600px] bg-[#1d232a] shadow-xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4">
+        <div className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-60 xl:right-24 xl:w-[600px]  bg-[#1d232a] shadow-xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4">
           <h3 className="text-xl font-medium text-white">Schaden melden</h3>
-          <p className="text-center">
+          <p className="text-center mb-3">
             Sie hatten einen Unfall? Nutzen Sie das folgende Formular um mir im
             ersten Schritt die wichtigsten Infos bereit zu stellen.
           </p>
+          <div className="flex flex-col w-full gap-4">
+            <div className="flex lg:flex-row flex-col gap-4 w-full">
+              <input
+                type="text"
+                placeholder="Name"
+                className="input input-bordered w-full"
+              />
+              <input
+                type="text"
+                placeholder="Email"
+                className="input input-bordered w-full"
+              />
+            </div>
+            <div className="flex lg:flex-row flex-col gap-4 w-full">
+              <input
+                type="text"
+                placeholder="Telefon"
+                className="input input-bordered lg:w-1/2 w-full"
+              />
+              <select className="select select-bordered w-full">
+                <option disabled selected>
+                  Anliegen
+                </option>
+                <option>Unfallgutachten</option>
+                <option>Kostenvoranschläge</option>
+                <option>Wertgutachten</option>
+                <option>Leasingrücknahmen</option>
+                <option>Vorschädenanalyse</option>
+                <option>Reperaturbestätigungen</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <textarea
+              placeholder="Optionale Nachricht"
+              className="textarea textarea-bordered"
+              rows={4}
+            />
+            <div className="form-control">
+              <label className="label cursor-pointer">
+                <input
+                  type="checkbox"
+                  className="checkbox text-3xl border-primary checked:border-primary [--chkbg:theme(colors.primary)] [--chkfg:blue]"
+                />
+                <span className="label-text mr-auto ml-3">
+                  Ich habe die Datenschutzerklärung gelesen und stimme zu.
+                </span>
+              </label>
+            </div>
+            <Button className="btn btn-primary">Absenden</Button>
+          </div>
         </div>
       </section>
     </main>
