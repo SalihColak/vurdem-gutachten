@@ -269,16 +269,16 @@ export default function Home() {
       </section>
       <section
         id="ueber-uns"
-        className="w-full sm:pb-40 pb-20 sm:pt-40 bg-white"
+        className="w-full sm:pb-40 pb-20 xl:pt-40 bg-white"
       >
         <div className="flex flex-col items-center px-2">
           <h5 className="text-lg font-bold mb-2 text-center text-neutral-800">
             Über Uns
           </h5>
-          <h3 className="lg:text-4xl xl:text-5xl text-2xl font-semibold xl:leading-[60px] mb-8 text-center text-[#1d232a]">
-            Der #1 Gutachter in Deutschland
+          <h3 className="lg:text-4xl xl:text-4xl text-2xl font-semibold xl:leading-[60px] mb-8 text-center text-[#1d232a]">
+            Vertrauenswürdige und zuverlässige KFZ-Gutachten
           </h3>
-          <p className="max-w-[70rem] text-center md:text-2xl text-lg font-light text-neutral-600 md:!leading-9 !leading-7">
+          <p className="max-w-[70rem] text-center md:text-xl text-lg font-light text-neutral-600 md:!leading-9 !leading-7">
             In einem modernen Haushalt ist ein Auto unverzichtbar. Wenn Ihr
             Fahrzeug einen Schaden erleidet, kann Ihre Mobilität stark
             eingeschränkt sein. Damit Sie in solchen Situationen schnell und
