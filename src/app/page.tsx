@@ -14,6 +14,11 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Mouse from "../../public/mouse.png";
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
+import bundesweit from "../../public/bundesweit.svg";
+import immer from "../../public/immer.svg";
+import quali from "../../public/quali.svg";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -105,6 +110,9 @@ export default function Home() {
             <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
               <li className="p-4 px-2">
+                <a>Über uns</a>
+              </li>
+              <li className="p-4 px-2">
                 <a>Leistungen</a>
               </li>
               <li className="p-4 px-2">
@@ -192,8 +200,8 @@ export default function Home() {
           </a>
         </motion.div> */}
       </div>
-      <section className="h-screen bg-white relative">
-        <div className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-60 xl:right-24 xl:w-[600px]  bg-[#1d232a] shadow-xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4">
+      <section className="lg:pb-10 bg-white relative">
+        <div className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-[420px] xl:right-24 xl:w-[600px] 2xl:w-[1000px] bg-[#1d232a] lg:bg-[#1d232a]/80 backdrop-blur-2xl shadow-2xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4">
           <h3 className="text-xl font-medium text-white">Schaden melden</h3>
           <p className="text-center mb-3">
             Sie hatten einen Unfall? Nutzen Sie das folgende Formular um mir im
@@ -233,7 +241,7 @@ export default function Home() {
             </div>
             <textarea
               placeholder="Optionale Nachricht"
-              className="textarea textarea-bordered"
+              className="textarea textarea-bordered textarea-md text-base"
               rows={4}
             />
             <div className="form-control">
@@ -243,12 +251,78 @@ export default function Home() {
                   className="checkbox text-3xl border-primary checked:border-primary [--chkbg:theme(colors.primary)] [--chkfg:blue]"
                 />
                 <span className="label-text mr-auto ml-3">
-                  Ich habe die Datenschutzerklärung gelesen und stimme zu.
+                  Ich habe die{" "}
+                  <Link
+                    href={"/datenschutz"}
+                    target="_blank"
+                    className="text-primary"
+                  >
+                    Datenschutzerklärung
+                  </Link>{" "}
+                  gelesen und stimme zu.
                 </span>
               </label>
             </div>
             <Button className="btn btn-primary">Absenden</Button>
           </div>
+        </div>
+      </section>
+      <section
+        id="ueber-uns"
+        className="w-full sm:pb-40 pb-20 sm:pt-40 bg-white"
+      >
+        <div className="flex flex-col items-center px-2">
+          <h5 className="text-lg font-bold mb-2 text-center text-neutral-800">
+            Über Uns
+          </h5>
+          <h3 className="lg:text-4xl xl:text-5xl text-2xl font-semibold xl:leading-[60px] mb-8 text-center text-[#1d232a]">
+            Der #1 Gutachter in Deutschland
+          </h3>
+          <p className="max-w-[70rem] text-center md:text-2xl text-lg font-light text-neutral-600 md:!leading-9 !leading-7">
+            In einem modernen Haushalt ist ein Auto unverzichtbar. Wenn Ihr
+            Fahrzeug einen Schaden erleidet, kann Ihre Mobilität stark
+            eingeschränkt sein. Damit Sie in solchen Situationen schnell und
+            zuverlässig Unterstützung erhalten, steht Ihnen unser junges,
+            engagiertes Team mit professionellen KFZ-Gutachten zur Seite.
+          </p>
+          <div className="flex md:flex-row flex-col justify-center 2xl:mt-36 mt-20 gap-20 text-[#1d232a]">
+            <div className=" flex flex-col items-center md:max-w-[21rem] text-center gap-6">
+              <Image
+                src={bundesweit}
+                width={100}
+                height={100}
+                alt="Standorte"
+              />
+              <h5 className="text-2xl font-bold mt-2">Bundesweit</h5>
+              <p className="text-xl font-light">
+                Egal wo sie sich befinden, wir sind in ganz Deutschland für Sie
+                da.
+              </p>
+            </div>
+            <div className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6">
+              <Image src={immer} width={100} height={100} alt="Studenten" />
+              <h5 className="text-2xl font-bold mt-2">24/7 erreichbar</h5>
+              <p className="text-xl font-light">
+                Wir sind immer für Sie erreichbar, auch an Wochenenden und
+                Feiertagen.
+              </p>
+            </div>
+            <div className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6">
+              <Image src={quali} width={100} height={100} alt="Erfahrung" />
+              <h5 className="text-2xl font-bold mt-2">
+                Qualifizierte Gutachter
+              </h5>
+              <p className="text-xl font-light">
+                Unsere langjährige Erfahrung mit Kunden führt zu hoher Qualität
+                und Zufriedenheit.
+              </p>
+            </div>
+          </div>
+          <a href="#bewerben">
+            <Button className=" mt-20 text-xl p-1 rounded-xl bg-[#1d232a]">
+              Jetzt kontaktieren <ArrowUpRight size={24} />
+            </Button>
+          </a>
         </div>
       </section>
     </main>
