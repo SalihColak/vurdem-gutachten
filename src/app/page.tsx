@@ -1,18 +1,8 @@
 "use client";
 
-import {
-  Button,
-  Card,
-  Navbar,
-  NavbarBrand,
-  NavbarCollapse,
-  NavbarLink,
-  NavbarToggle,
-} from "flowbite-react";
+import { Button } from "flowbite-react";
 import Image from "next/image";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
-import Mouse from "../../public/mouse.png";
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import bundesweit from "../../public/bundesweit.svg";
@@ -22,8 +12,81 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <main
-      className="h-screen bg-[url('/bg-hero.jpg')] bg-[right_20%_top_100%] xl:bg-right-top bg-no-repeat bg-cover 
+    <main>
+      <div className="navbar bg-base-100 sticky top-0 z-50 drawer">
+        <div className="flex-1">
+          <a href="/#" className="text-xl cursor-pointer">
+            <Image
+              width={400}
+              height={200}
+              src="/logo-dv.png"
+              className="mr-3 lg:w-96 w-64 transition-all duration-300"
+              alt="Logo"
+            />
+          </a>
+        </div>
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="flex gap-3">
+          <a
+            href="tel:017641983003"
+            className="btn bg-primary hover:bg-primary/60 text-black transition-all duration-300 lg:flex hidden"
+          >
+            <Phone /> <span>0176 419 83 003</span>
+          </a>
+          <a
+            href="mailto:info@dv-gutachten.de"
+            className="btn transition-all duration-300 lg:flex hidden"
+          >
+            <Mail /> <span>info@dv-gutachten.de</span>
+          </a>
+        </div>
+        <div className="drawer-content">
+          {/* Page content here */}
+          <label htmlFor="my-drawer" className="btn btn-ghost drawer-button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-5 h-5 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+        </div>
+        <div className="drawer-side">
+          <label
+            htmlFor="my-drawer"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+          ></label>
+          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+            {/* Sidebar content here */}
+            <li className="p-4 px-2 ">
+              <a href="/#ueber-uns">Über uns</a>
+            </li>
+            <li className="p-4 px-2">
+              <a href="/#leistungen">Leistungen</a>
+            </li>
+            <li className="p-4 px-2">
+              <a href="/#faq">FAQ</a>
+            </li>
+            <li className="p-4 px-2">
+              <a href="/#bewertungen">Kundenbewertungen</a>
+            </li>
+            <li className="p-4 px-2">
+              <a href="/impressum">Impressum</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        className=" h-screen bg-[url('/bg-hero.jpg')] bg-[right_20%_top_100%] xl:bg-right-top bg-no-repeat bg-cover 
       relative
     before:content-['']
     before:absolute
@@ -36,110 +99,8 @@ export default function Home() {
     before:opacity-65
     before:to-black
     "
-    >
-      <div className="relative h-screen">
-        {/* <Navbar fluid className="fixed top-0 w-full shadow-xl z-30 bg-white">
-          <NavbarBrand className="xl:ml-20" href="#">
-            <Image
-              width={300}
-              height={200}
-              src="/logo-dv.png"
-              className="mr-3 h-12"
-              alt="Logo"
-            />
-          </NavbarBrand>
-          <NavbarToggle />
-
-          <NavbarCollapse className="uppercase">
-            <NavbarLink className="hover:text-orange-400 text-lg" href="#">
-              Leistungen
-            </NavbarLink>
-            <NavbarLink className="hover:text-orange-400 text-lg" href="#">
-              FAQ
-            </NavbarLink>
-            <NavbarLink className="hover:text-orange-400 text-lg" href="#">
-              Kundenbewertungen
-            </NavbarLink>
-          </NavbarCollapse>
-        </Navbar> */}
-        <div className="navbar bg-base-100 fixed top-0 z-50 drawer">
-          <div className="flex-1">
-            <a className="text-xl cursor-pointer">
-              <Image
-                width={400}
-                height={200}
-                src="/logo-dv.png"
-                className="mr-3 lg:w-96 w-64 transition-all duration-300"
-                alt="Logo"
-              />
-            </a>
-          </div>
-          <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-          <div className="flex gap-3">
-            <button className="btn transition-all duration-300 lg:flex hidden">
-              <Phone /> <span>0176 419 83 003</span>
-            </button>
-            <button className="btn transition-all duration-300 lg:flex hidden">
-              <Mail /> <span>info@dv-gutachten.de</span>
-            </button>
-          </div>
-          <div className="drawer-content">
-            {/* Page content here */}
-            <label htmlFor="my-drawer" className="btn btn-ghost drawer-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block w-5 h-5 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div className="drawer-side">
-            <label
-              htmlFor="my-drawer"
-              aria-label="close sidebar"
-              className="drawer-overlay"
-            ></label>
-            <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-              {/* Sidebar content here */}
-              <li className="p-4 px-2">
-                <a>Über uns</a>
-              </li>
-              <li className="p-4 px-2">
-                <a>Leistungen</a>
-              </li>
-              <li className="p-4 px-2">
-                <a>FAQ</a>
-              </li>
-              <li className="p-4 px-2">
-                <a>Kundenbewertungen</a>
-              </li>
-              <li className="p-4 px-2">
-                <a>Impressum</a>
-              </li>
-              <li className="flex lg:hidden p-4 px-2">
-                <div className="bg-white text-black font-bold">
-                  <Phone size={18} />
-                  0176 419 83 003
-                </div>
-              </li>
-              <li className="flex lg:hidden p-4 px-2">
-                <div className="bg-white text-black font-bold">
-                  <Mail size={18} />
-                  info@dv-gutachten.de
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="text-white absolute xl:top-1/3 xl:left-32 top-1/2 left-1/2 w-full xl:w-fit xl:translate-y-0 xl:-translate-x-0 -translate-y-1/2 -translate-x-1/2 xl:mt-0 mix-blend-screen px-2">
+      >
+        <div className="text-white absolute xl:top-1/4 xl:left-32 top-1/2 left-1/2 w-full xl:w-fit xl:translate-y-0 xl:-translate-x-0 -translate-y-1/2 -translate-x-1/2 xl:mt-0 mix-blend-screen px-2">
           <motion.div
             initial={{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -175,7 +136,7 @@ export default function Home() {
             className="flex flex-wrap gap-4 items-center xl:justify-start justify-center"
           >
             <a
-              href="#"
+              href="#leistungen"
               type="button"
               className="uppercase cursor-pointer text-white text-sm xl:text-xl bg-[#1d232a] hover:bg-[#1d232a]/90 transition-all duration-300 hover:xl:px-6 font-medium rounded-lg px-3 xl:px-5 py-2.5 text-center me-2"
             >
@@ -183,25 +144,14 @@ export default function Home() {
             </a>
           </motion.div>
         </div>
-
-        {/* <motion.div
-          initial={{ y: 0 }}
-          animate={{ y: 20 }}
-          transition={{
-            ease: "circIn",
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          className="absolute bottom-12 left-1/2 w-10 hidden xl:block"
-        >
-          <a href="#dienstleistungen">
-            <Image src={Mouse} alt="scroll" className="-translate-x-1/2" />
-          </a>
-        </motion.div> */}
       </div>
       <section className="lg:pb-10 bg-white relative">
-        <div className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-[420px] xl:right-24 xl:w-[600px] 2xl:w-[1000px] bg-[#1d232a] lg:bg-[#1d232a]/80 backdrop-blur-2xl shadow-2xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4">
+        <motion.div
+          initial={{ y: 200 }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeInOut", duration: 0.75 }}
+          className="xl:absolute relative  xl:mt-0 mx-auto -top-32 xl:-top-96 xl:right-24 xl:w-[600px] 2xl:w-[1000px] bg-[#1d232a] lg:bg-[#1d232a]/80 backdrop-blur-2xl shadow-2xl rounded-xl w-[90%] flex flex-col items-center p-8 gap-4"
+        >
           <h3 className="text-xl font-medium text-white">Schaden melden</h3>
           <p className="text-center mb-3">
             Sie hatten einen Unfall? Nutzen Sie das folgende Formular um mir im
@@ -265,13 +215,19 @@ export default function Home() {
             </div>
             <Button className="btn btn-primary">Absenden</Button>
           </div>
-        </div>
+        </motion.div>
       </section>
       <section
         id="ueber-uns"
         className="w-full sm:pb-40 pb-20 xl:pt-40 bg-white"
       >
-        <div className="flex flex-col items-center px-2">
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center px-2"
+        >
           <h5 className="text-lg font-bold mb-2 text-center text-neutral-800">
             Über Uns
           </h5>
@@ -285,8 +241,14 @@ export default function Home() {
             zuverlässig Unterstützung erhalten, steht Ihnen unser junges,
             engagiertes Team mit professionellen KFZ-Gutachten zur Seite.
           </p>
-          <div className="flex md:flex-row flex-col justify-center 2xl:mt-36 mt-20 gap-20 text-[#1d232a]">
-            <div className=" flex flex-col items-center md:max-w-[21rem] text-center gap-6">
+          <div className="flex md:flex-row flex-col justify-center 2xl:mt-36 mt-20 gap-20 text-[#1d232a] overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className=" flex flex-col items-center md:max-w-[21rem] text-center gap-6"
+            >
               <Image
                 src={bundesweit}
                 width={100}
@@ -298,8 +260,14 @@ export default function Home() {
                 Egal wo sie sich befinden, wir sind in ganz Deutschland für Sie
                 da.
               </p>
-            </div>
-            <div className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6"
+            >
               <Image
                 src={immer}
                 width={100}
@@ -311,8 +279,14 @@ export default function Home() {
                 Wir sind immer für Sie erreichbar, auch an Wochenenden und
                 Feiertagen.
               </p>
-            </div>
-            <div className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+              className="flex flex-col items-center  md:max-w-[21rem] text-center gap-6"
+            >
               <Image src={quali} width={100} height={100} alt="Erfahrung" />
               <h5 className="text-2xl font-bold mt-2">
                 Qualifizierte Gutachter
@@ -321,35 +295,52 @@ export default function Home() {
                 Unsere langjährige Erfahrung mit Kunden führt zu hoher Qualität
                 und Zufriedenheit.
               </p>
-            </div>
+            </motion.div>
           </div>
           <a href="#bewerben">
-            <Button className=" mt-20 text-xl p-1 rounded-xl bg-[#1d232a]">
+            <Button
+              className=" mt-20 text-xl p-1 rounded-xl bg-[#1d232a]"
+              onClick={() => {
+                const dialog = document.getElementById(
+                  "contact_modal"
+                ) as HTMLDialogElement;
+                if (dialog) dialog.showModal();
+              }}
+            >
               Jetzt kontaktieren <ArrowUpRight size={24} />
             </Button>
           </a>
-        </div>
+        </motion.div>
       </section>
-      <section className="flex flex-col items-center py-20 text-black relative">
+      <section
+        id="leistungen"
+        className="flex flex-col items-center py-20 text-black relative scroll-mt-10"
+      >
         <Image
           src={"/image1.jpg"}
           fill
           alt="hg"
           className="object-cover absolute top-0 left-0 w-full h-full blur-lg"
         />
-        <div className="bg-[#1d232a] absolute top-0 left-0 w-full h-full opacity-90  z-10" />
+        <div className="bg-[#1d232a] absolute top-0 left-0 w-full h-full opacity-85  z-10" />
 
         <div className=" w-[1200px] h-[80%] top-60 blur-2xl bg-gradient-to-tr from-primary/10 to-orange-400/10 rounded-full absolute hidden xl:block" />
         <h2 className="z-30 mb-20 text-4xl text-white font-medium">
           Unsere Leistungen
         </h2>
         <div className="z-20 relative grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96 bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden ">
               <Image
                 src={"/haftpflicht.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Unfallgutachten"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -369,14 +360,20 @@ export default function Home() {
                 </div>
               </details>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96  bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
-                src={"/haftpflicht.jpg"}
+                src={"/wert.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Wertgutachten"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -394,14 +391,20 @@ export default function Home() {
                 </div>
               </details>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96  bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
-                src={"/haftpflicht.jpg"}
+                src={"/leasing.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Leasingrücknahmen"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -419,14 +422,20 @@ export default function Home() {
                 </div>
               </details>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96  bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
-                src={"/haftpflicht.jpg"}
+                src={"/vorschaden.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Vorschadenanalyse"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -448,14 +457,20 @@ export default function Home() {
                 </div>
               </details>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96  bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
-                src={"/haftpflicht.jpg"}
+                src={"/kurz.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Kurzgutachten"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -475,14 +490,20 @@ export default function Home() {
                 </div>
               </details>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col w-96  bg-white rounded-xl group">
+          <motion.div
+            initial={{ opacity: 0, y: 200 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="flex flex-col w-96  bg-white rounded-xl group"
+          >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
-                src={"/haftpflicht.jpg"}
+                src={"/reperatur.jpg"}
                 fill
-                alt="Unfallschaden"
+                alt="Reparaturbestätigungen"
                 className="rounded-t-xl object-cover transition-transform duration-700 transform group-hover:scale-110 group-hover:rotate-1"
               />
             </div>
@@ -507,10 +528,346 @@ export default function Home() {
                 </div>
               </details>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section id="faq" className="bg-white dark:bg-gray-900">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <h2 className="mb-8 text-4xl tracking-tight font-bold text-gray-900 dark:text-white text-center">
+            Häufig gestellte Fragen
+          </h2>
+          <div className="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+            <div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  What do you mean by Figma assets?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  You will have access to download the full Figma project
+                  including all of the pages, the components, responsive pages,
+                  and also the icons, illustrations, and images included in the
+                  screens.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  What does lifetime access exactly mean?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Once you have purchased either the design, code, or both
+                  packages, you will have access to all of the future updates
+                  based on the roadmap, free of charge.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  How does support work?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Were aware of the importance of well qualified support, that
+                  is why we decided that support will only be provided by the
+                  authors that actually worked on this project.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Feel free to{" "}
+                  <a
+                    href="#"
+                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    contact us
+                  </a>{" "}
+                  and well help you out as soon as we can.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  I want to build more than one project. Is that allowed?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  You can use Windster for an unlimited amount of projects,
+                  whether its a personal website, a SaaS app, or a website for a
+                  client. As long as you dont build a product that will directly
+                  compete with Windster either as a UI kit, theme, or template,
+                  its fine.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Find out more information by{" "}
+                  <a
+                    href="#"
+                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    reading the license
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+            <div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  What does free updates include?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  The free updates that will be provided is based on the{" "}
+                  <a
+                    href="#"
+                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    roadmap
+                  </a>{" "}
+                  that we have laid out for this project. It is also possible
+                  that we will provide extra updates outside of the roadmap as
+                  well.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  What does the free version include?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  The{" "}
+                  <a
+                    href="#"
+                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    free version
+                  </a>{" "}
+                  of Windster includes a minimal style guidelines, component
+                  variants, and a dashboard page with the mobile version
+                  alongside it.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  You can use this version for any purposes, because it is
+                  open-source under the MIT license.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  What is the difference between Windster and Tailwind UI?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Although both Windster and Tailwind UI are built for
+                  integration with Tailwind CSS, the main difference is in the
+                  design, the pages, the extra components and UI elements that
+                  Windster includes.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Additionally, Windster is a project that is still in
+                  development, and later it will include both the application,
+                  marketing, and e-commerce UI interfaces.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Can I use Windster in open-source projects?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Generally, it is accepted to use Windster in open-source
+                  projects, as long as it is not a UI library, a theme, a
+                  template, a page-builder that would be considered as an
+                  alternative to Windster itself.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  With that being said, feel free to use this design kit for
+                  your open-source projects.
+                </p>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Find out more information by{" "}
+                  <a
+                    href="#"
+                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                  >
+                    reading the license
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section className="h-screen bg-white"></section>
+      <div className="lg:hidden  fixed right-0 top-80 text-white flex flex-col z-[9999]">
+        <a
+          href="tel:017641983003"
+          className="w-12 h-12 bg-[#1d232a] flex items-center justify-center rounded-tl-xl"
+        >
+          <Phone size={24} />
+        </a>
+        <a
+          href="mailto:info@dv-gutachten.de"
+          className="w-12 h-12 bg-primary flex items-center justify-center rounded-bl-xl"
+        >
+          <Mail size={24} />
+        </a>
+      </div>
+      <dialog id="contact_modal" className="modal">
+        <div className="modal-box w-11/12 max-w-2xl">
+          <div className="relative bg-[#1d232a] lg:bg-[#1d232a]/80 backdrop-blur-2xl shadow-2xl rounded-xl flex flex-col items-center p-8 gap-4">
+            <h3 className="text-xl font-medium text-white">Kontaktieren</h3>
+
+            <div className="flex flex-col w-full gap-4">
+              <div className="flex lg:flex-row flex-col gap-4 w-full">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="input input-bordered w-full"
+                />
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="input input-bordered w-full"
+                />
+              </div>
+              <div className="flex lg:flex-row flex-col gap-4 w-full">
+                <input
+                  type="text"
+                  placeholder="Telefon"
+                  className="input input-bordered lg:w-1/2 w-full"
+                />
+                <select className="select select-bordered w-full">
+                  <option disabled selected>
+                    Anliegen
+                  </option>
+                  <option>Unfallgutachten</option>
+                  <option>Kostenvoranschläge</option>
+                  <option>Wertgutachten</option>
+                  <option>Leasingrücknahmen</option>
+                  <option>Vorschädenanalyse</option>
+                  <option>Reperaturbestätigungen</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+              <textarea
+                placeholder="Optionale Nachricht"
+                className="textarea textarea-bordered textarea-md text-base"
+                rows={4}
+              />
+              <div className="form-control">
+                <label className="label cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="checkbox text-3xl border-primary checked:border-primary [--chkbg:theme(colors.primary)] [--chkfg:blue]"
+                  />
+                  <span className="label-text mr-auto ml-3">
+                    Ich habe die{" "}
+                    <Link
+                      href={"/datenschutz"}
+                      target="_blank"
+                      className="text-primary"
+                    >
+                      Datenschutzerklärung
+                    </Link>{" "}
+                    gelesen und stimme zu.
+                  </span>
+                </label>
+              </div>
+              <Button className="btn btn-primary">Absenden</Button>
+            </div>
+          </div>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button>close</button>
+        </form>
+      </dialog>
     </main>
   );
 }
