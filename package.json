@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@schlomoh/react-cookieconsent": "^1.6.1",
     "@studio-freight/lenis": "^1.0.42",
     "flowbite-react": "^0.9.0",
     "framer-motion": "^11.1.3",

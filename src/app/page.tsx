@@ -9,81 +9,30 @@ import bundesweit from "../../public/bundesweit.svg";
 import immer from "../../public/immer.svg";
 import quali from "../../public/quali.svg";
 import { ArrowUpRight } from "lucide-react";
+import { CookieModal } from "@schlomoh/react-cookieconsent";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const Content = () => (
+  <>
+    <h3>Diese Webseite benutzt Cookies</h3>
+    <p>Um das Nutzungserlebnis zu steigern benutzt diese Webseite Cookies.</p>
+  </>
+);
 
 export default function Home() {
   return (
     <main>
-      <div className="navbar bg-base-100 sticky top-0 z-50 drawer">
-        <div className="flex-1">
-          <a href="/#" className="text-xl cursor-pointer">
-            <Image
-              width={400}
-              height={200}
-              src="/logo-dv.png"
-              className="mr-3 lg:w-96 w-64 transition-all duration-300"
-              alt="Logo"
-            />
-          </a>
-        </div>
-        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="flex gap-3">
-          <a
-            href="tel:017641983003"
-            className="btn bg-primary hover:bg-primary/60 text-black transition-all duration-300 lg:flex hidden"
-          >
-            <Phone /> <span>0176 419 83 003</span>
-          </a>
-          <a
-            href="mailto:info@dv-gutachten.de"
-            className="btn transition-all duration-300 lg:flex hidden"
-          >
-            <Mail /> <span>info@dv-gutachten.de</span>
-          </a>
-        </div>
-        <div className="drawer-content">
-          {/* Page content here */}
-          <label htmlFor="my-drawer" className="btn btn-ghost drawer-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block w-5 h-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </label>
-        </div>
-        <div className="drawer-side">
-          <label
-            htmlFor="my-drawer"
-            aria-label="close sidebar"
-            className="drawer-overlay"
-          ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
-            {/* Sidebar content here */}
-            <li className="p-4 px-2 ">
-              <a href="/#ueber-uns">Über uns</a>
-            </li>
-            <li className="p-4 px-2">
-              <a href="/#leistungen">Leistungen</a>
-            </li>
-            <li className="p-4 px-2">
-              <a href="/#faq">FAQ</a>
-            </li>
-            <li className="p-4 px-2">
-              <a href="/#bewertungen">Kundenbewertungen</a>
-            </li>
-            <li className="p-4 px-2">
-              <a href="/impressum">Impressum</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <CookieModal
+        acceptButtonText="Akzeptieren"
+        declineButtonText="Ablehnen"
+        headingColor="white"
+        paragraphColor="grey"
+        containerStyle={{ backgroundColor: "#14181d", zIndex: 9999 }}
+        primaryButtonStyle={{ backgroundColor: "#427a90" }}
+        infoContent={<Content />}
+      />
+      <Navbar />
 
       <div
         className=" h-screen bg-[url('/bg-hero.jpg')] bg-[right_20%_top_100%] xl:bg-right-top bg-no-repeat bg-cover 
@@ -226,7 +175,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center px-2"
+          className="flex flex-col items-center px-2 w-full"
         >
           <h5 className="text-lg font-bold mb-2 text-center text-neutral-800">
             Über Uns
@@ -241,7 +190,7 @@ export default function Home() {
             zuverlässig Unterstützung erhalten, steht Ihnen unser junges,
             engagiertes Team mit professionellen KFZ-Gutachten zur Seite.
           </p>
-          <div className="flex md:flex-row flex-col justify-center 2xl:mt-36 mt-20 gap-20 text-[#1d232a] overflow-hidden">
+          <div className="flex md:flex-row flex-col justify-center 2xl:mt-36 mt-20 gap-20 text-[#1d232a] overflow-hidden w-full">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -334,7 +283,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96 bg-white rounded-xl group"
+            className="h-min flex flex-col w-96 bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden ">
               <Image
@@ -367,7 +316,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96  bg-white rounded-xl group"
+            className="h-min flex flex-col w-96  bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
@@ -398,7 +347,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96  bg-white rounded-xl group"
+            className="h-min flex flex-col w-96  bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
@@ -429,7 +378,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96  bg-white rounded-xl group"
+            className="h-min flex flex-col w-96  bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
@@ -464,7 +413,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96  bg-white rounded-xl group"
+            className="h-min flex flex-col w-96  bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
@@ -497,7 +446,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="flex flex-col w-96  bg-white rounded-xl group"
+            className="h-min flex flex-col w-96  bg-white rounded-xl group"
           >
             <div className="w-full h-60 relative overflow-hidden">
               <Image
@@ -785,7 +734,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="lg:hidden  fixed right-0 top-80 text-white flex flex-col z-[9999]">
+      <Footer />
+      <div className="lg:hidden  fixed right-0 top-80 text-white flex flex-col z-[999]">
         <a
           href="tel:017641983003"
           className="w-12 h-12 bg-[#1d232a] flex items-center justify-center rounded-tl-xl"
