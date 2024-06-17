@@ -93,7 +93,7 @@ function Footer() {
             <a href="/" className="hover:underline">
               D&V Ingenieur-und Sachverständigenbüro
             </a>
-            . All Rechte vorbehalten.
+            . Alle Rechte vorbehalten.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="#" className="text-gray-500 hover:text-white ">
