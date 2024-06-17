@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import React from "react";
@@ -30,6 +31,7 @@ function Impressum() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
