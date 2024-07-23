@@ -1,16 +1,19 @@
+"use client";
+
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
-const Navbar = async () => {
+const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 sticky top-0 z-50 drawer">
-      <div className="flex-1">
+    <motion.div className="navbar bg-base-100/70 backdrop-blur-md sticky top-0 z-50 drawer">
+      <div className="flex-1 ">
         <a href="/#" className="text-xl cursor-pointer">
           <Image
             width={400}
             height={200}
-            src="/logo-dv.png"
+            src="/logo-dark.png"
             className="mr-3 lg:w-96 w-64 transition-all duration-300"
             alt="Logo"
           />
@@ -74,7 +77,7 @@ const Navbar = async () => {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
