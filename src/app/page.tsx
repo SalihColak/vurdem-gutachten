@@ -502,13 +502,14 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What do you mean by Figma assets?
+                  Wann benötige ich ein Kfz-Gutachten?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  You will have access to download the full Figma project
-                  including all of the pages, the components, responsive pages,
-                  and also the icons, illustrations, and images included in the
-                  screens.
+                  Ein Kfz-Gutachten ist hilfreich bei Unfällen, zur Bewertung
+                  des Fahrzeugwerts beim Kauf oder Verkauf, zur Feststellung von
+                  Schäden bei Versicherungsansprüchen, zur Dokumentation des
+                  Zustands für Finanzierungen oder zur Einstufung von
+                  historischen Fahrzeugen (Oldtimern) bei der Versicherung.
                 </p>
               </div>
               <div className="mb-10">
@@ -525,12 +526,15 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does lifetime access exactly mean?
+                  Wie viel kostet ein Kfz-Gutachten und übernimmt die
+                  Versicherung die Kosten?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Once you have purchased either the design, code, or both
-                  packages, you will have access to all of the future updates
-                  based on the roadmap, free of charge.
+                  Die Kosten für ein Kfz-Gutachten variieren je nach Umfang und
+                  Art des Gutachtens. Bei einem Haftpflichtschaden, bei dem Sie
+                  keine Schuld tragen, übernimmt die gegnerische Versicherung
+                  die Kosten für ein Gutachten vollständig. Sie müssen dann
+                  nichts zahlen.
                 </p>
               </div>
               <div className="mb-10">
@@ -547,24 +551,13 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  How does support work?
+                  Welche Unterlagen benötige ich für ein Gutachten?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Were aware of the importance of well qualified support, that
-                  is why we decided that support will only be provided by the
-                  authors that actually worked on this project.
-                </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Feel free to{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    contact us
-                  </a>{" "}
-                  and well help you out as soon as we can.
+                  Für ein Kfz-Gutachten benötigen Sie in der Regel die
+                  Fahrzeugpapiere, einen Nachweis über den Schaden (z. B.
+                  Unfallmitteilung) und gegebenenfalls vorherige Gutachten oder
+                  Reparaturberichte.
                 </p>
               </div>
               <div className="mb-10">
@@ -581,24 +574,189 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  I want to build more than one project. Is that allowed?
+                  Kann ich das Gutachten auch bei einem Gericht verwenden?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  You can use Windster for an unlimited amount of projects,
-                  whether its a personal website, a SaaS app, or a website for a
-                  client. As long as you dont build a product that will directly
-                  compete with Windster either as a UI kit, theme, or template,
-                  its fine.
+                  Ja, Gutachten von qualifizierten Kfz-Gutachtern können in
+                  rechtlichen Auseinandersetzungen und Gerichtsverfahren
+                  verwendet werden, um eine fundierte Bewertung des Fahrzeugs
+                  vorzulegen.
                 </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Find out more information by{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    reading the license
-                  </a>
-                  .
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was passiert, wenn mein Fahrzeug nicht fahrbereit ist?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Wenn Ihr Fahrzeug nicht fahrbereit ist, können wir nach
+                  Absprache einen Ortstermin bei Ihnen vor Ort oder in einer
+                  Werkstatt durchführen, um das Gutachten zu erstellen.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Wie detailliert ist ein Kfz-Gutachten?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Ein Kfz-Gutachten ist sehr detailliert und umfasst alle
+                  relevanten Aspekte des Fahrzeugs, wie Schäden, Wert,
+                  technische Details und Reparaturbedarf. Das Gutachten enthält
+                  zudem Fotos und eine umfassende Beschreibung des Fahrzeugs.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Können Sie auch historische oder klassische Fahrzeuge
+                  begutachten?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Ja, wir haben Erfahrung mit der Begutachtung von historischen
+                  und klassischen Fahrzeugen. Solche Fahrzeuge erfordern oft
+                  spezielle Kenntnisse und Expertise, die wir bereitstellen
+                  können.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Kann ich eine zweite Meinung zu einem bestehenden Gutachten
+                  einholen?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Ja, Sie können jederzeit eine zweite Meinung einholen. Ein
+                  zweites Gutachten kann zusätzliche Klarheit bringen oder
+                  bestehende Differenzen klären.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was ist der Wiederbeschaffungswert eines Fahrzeugs?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Der Wiederbeschaffungswert eines Fahrzeugs ist der Betrag, den
+                  man aufbringen muss, um ein gleichwertiges Fahrzeug in einem
+                  vergleichbaren Zustand und mit ähnlicher Ausstattung und
+                  Laufleistung wiederzubeschaffen. Dieser Wert berücksichtigt
+                  den aktuellen Marktwert und dient als Grundlage für die
+                  Berechnung vom Entschädigungszahlungen durch Versicherungen im
+                  Schadensfall. Der Wiederbeschaffungswert ist relevant, wenn
+                  ein Fahrzeug nach einem Unfall oder Schaden als
+                  wirtschaftlicher Totalschaden eingestuft wird.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was ist eine Wertminderung (technischer und merkantiler
+                  Minderwert)?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Eine Wertminderung bezeichnet den finanziellen Verlust, den
+                  ein Fahrzeug nach einem Unfall oder Schaden erleidet, selbst
+                  wenn es vollständig repariert wurde. Dieser Wertverlust
+                  entsteht, weil das Fahrzeug durch den Schaden an Wert
+                  eingebüßt hat und Käufer bei einem späteren Verkauf häufig
+                  weniger bereit sind zu zahlen, da das Fahrzeug als
+                  {'"'}Unfallfahrzeug{'"'} gilt. Der technische Minderwert
+                  bezieht sich auf den Verlust an Wert, den das Fahrzeug nach
+                  der Reparatur weiterhin hat, da verbleibende technische Mängel
+                  oder Beeinträchtigungen vorhanden sind. Der merkantile
+                  Minderwert bezieht sich auf den Verlust an Wert, welchen das
+                  Fahrzeug noch hat, da es als Unfallfahrzeug gilt, unabhängig
+                  davon, wie gut die Reparatur durchgeführt wurde.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Wie finde ich einen qualifizierten Kfz-Gutachter?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Achten Sie auf die Qualifikationen und Erfahrungen des
+                  Gutachters. Zertifikate, Mitgliedschaften in Berufsverbänden
+                  und Empfehlungen von Verwandten und Freunden können
+                  Anhaltspunkte für die Qualität des Gutachters sein.
                 </p>
               </div>
             </div>
@@ -617,19 +775,42 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does free updates include?
+                  Darf ich einen Rechtsanwalt einschalten? Habe ich die Kosten
+                  zu tragen?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  The free updates that will be provided is based on the{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+                  Ja, wir raten Ihnen auf jeden Fall einen Rechtsanwalt zu
+                  beauftragen. Dieser kümmert sich um den Schriftverkehr mit der
+                  gegnerischen Versicherung. Wenn Sie keine Schuld am Unfall
+                  tragen, werden auch die Anwaltskosten vollständig von der
+                  gegnerischen Versicherung übernommen. Falls Sie keinen Anwalt
+                  haben, können Sie uns direkt ansprechen und wir empfehlen
+                  Ihnen Anwälte mit denen wir jahrelang zusammenarbeiten.
+                </p>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    roadmap
-                  </a>{" "}
-                  that we have laid out for this project. It is also possible
-                  that we will provide extra updates outside of the roadmap as
-                  well.
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Welche Arten von Gutachten bieten Sie an?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Wir bieten verschiedene Arten von Gutachten an, darunter
+                  Schadengutachten, Wertgutachten, Kostenvoranschläge,
+                  Zustandsberichte, technische Beurteilungen und
+                  Oldtimer-Bewertungen. Bei speziellen Anforderungen sprechen
+                  Sie uns einfach an.
                 </p>
               </div>
               <div className="mb-10">
@@ -646,23 +827,15 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What does the free version include?
+                  Wie vereinbare ich einen Termin für ein Gutachten?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  The{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
-                  >
-                    free version
-                  </a>{" "}
-                  of Windster includes a minimal style guidelines, component
-                  variants, and a dashboard page with the mobile version
-                  alongside it.
-                </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  You can use this version for any purposes, because it is
-                  open-source under the MIT license.
+                  Sie können einen Termin telefonisch, per E-Mail oder über
+                  unser Online-Buchungssystem vereinbaren. Teilen Sie uns
+                  einfach Ihre Kontaktdaten und Ihre Verfügbarkeit mit. Wir
+                  kommen gerne zu Ihnen und begutachten das Fahrzeug bei vor Ort
+                  oder vereinbaren einen Termin in einer Werkstatt, sodass bei
+                  Bedarf auch Fahrzeugteile demontiert werden können.
                 </p>
               </div>
               <div className="mb-10">
@@ -679,18 +852,45 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  What is the difference between Windster and Tailwind UI?
+                  Was ist der Unterschied zwischen einem {'"'}Schadengutachten
+                  {'"'} und einem
+                  {' "'}Wertgutachten{'"'}?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Although both Windster and Tailwind UI are built for
-                  integration with Tailwind CSS, the main difference is in the
-                  design, the pages, the extra components and UI elements that
-                  Windster includes.
+                  Ein Schadengutachten bewertet den Umfang und die Kosten der
+                  Reparaturen nach einem Unfall oder Schaden, während ein
+                  Wertgutachten den aktuellen Marktwert des Fahrzeugs, abhängig
+                  von Schäden und Zustand, bestimmt.
                 </p>
+              </div>
+
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was versteht man unter dem Restwert eines Kraftfahrzeugs?
+                </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Additionally, Windster is a project that is still in
-                  development, and later it will include both the application,
-                  marketing, and e-commerce UI interfaces.
+                  Der Restwert eines Kraftfahrzeugs bezeichnet den verbleibenden
+                  Wert eines Fahrzeugs nach einem Unfall oder Schaden. Er stellt
+                  den Betrag dar, den man durch den Verkauf des beschädigten
+                  Fahrzeugs noch erzielen kann. Der Restwert wird üblicherweise
+                  von Sachverständigen ermittelt und spielt eine wichtige Rolle
+                  bei der Schadensregulierung durch Versicherungen. In der Regel
+                  erfolgt die Ermittlung des Restwerts durch das Einholen von
+                  Angeboten spezialisierter Restwertbörsen oder Verwerter. Der
+                  Restwert wird dann von dem Wiederbeschaffungswert abgezogen,
+                  die die Versicherung für den Totalschaden des Fahrzeugs zahlt.
                 </p>
               </div>
               <div className="mb-10">
@@ -707,27 +907,100 @@ export default function Home() {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  Can I use Windster in open-source projects?
+                  Was ist ein wirtschaftlicher Totalschaden?
                 </h3>
                 <p className="text-gray-500 dark:text-gray-400">
-                  Generally, it is accepted to use Windster in open-source
-                  projects, as long as it is not a UI library, a theme, a
-                  template, a page-builder that would be considered as an
-                  alternative to Windster itself.
+                  Ein wirtschaftlicher Totalschaden liegt vor, wenn die Kosten
+                  für die Reparatur den Fahrzeugwert übersteigen. Aus
+                  finanzieller Sicht lohnt sich in diesem Fall eine Reparatur
+                  nicht mehr. Wenn der Fahrzeughalter auf eine Reparatur
+                  besteht, könnte mithilfe der 130%-Regelung das Fahrzeug
+                  dennoch repariert werden. Aus technischer Sicht ist eine
+                  Instandsetzung möglich.
                 </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  With that being said, feel free to use this design kit for
-                  your open-source projects.
-                </p>
-                <p className="text-gray-500 dark:text-gray-400">
-                  Find out more information by{" "}
-                  <a
-                    href="#"
-                    className="font-medium underline text-primary-600 dark:text-primary-500 hover:no-underline"
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    reading the license
-                  </a>
-                  .
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was ist ein technischer Totalschaden?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Ein technischer Totalschaden liegt vor, wenn die
+                  Beschädigungen an einem Fahrzeug so enorm sind, dass die
+                  Wiederherstellung des vorherigen Zustands nicht mehr möglich
+                  ist oder mit einem unverhältnismäßigen Aufwand verbunden wäre.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was ist ein unechter Totalschaden?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Ein unechter Totalschaden liegt vor, wenn der Fahrzeughalter
+                  trotz Reparaturwürdigkeit den Schaden nicht reparieren möchte
+                  und auf Basis eines Totalschadens abrechnen möchte. Dies
+                  funktioniert nur dann, wenn die Reparaturkosten höher als die
+                  Differenz zwischen Wiederbeschaffungswert abzüglich Restwerts
+                  sind. Hierbei darf die Versicherung die kostengünstigere
+                  Variante wählen.
+                </p>
+              </div>
+              <div className="mb-10">
+                <h3 className="flex items-center mb-4 text-lg font-medium text-gray-900 dark:text-white">
+                  <svg
+                    className="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Was ist ein Bagatellschaden?
+                </h3>
+                <p className="text-gray-500 dark:text-gray-400">
+                  Unter einem Bagatellschaden versteht man einen geringfügigen
+                  Schaden an einem Fahrzeug, dessen Reparaturkosten relativ
+                  niedrig sind, meist unter einer bestimmten Schwelle von etwa
+                  750 bis 1.000 Euro. Solche Schäden sind in der Regel
+                  oberflächlicher Natur, wie kleine Kratzer, Dellen oder leichte
+                  Lackschäden, und beeinträchtigen die Funktionalität oder
+                  Sicherheit des Fahrzeugs nicht wesentlich. Versicherungen
+                  lehnen bei Bagatellschäden oft ein Haftpflichtgutachten ab, da
+                  die Kosten für das Gutachten den Schaden übersteigen könnten.
+                  Aus diesem Grund erstellen wir dann einen Kostenvoranschlag,
+                  wodurch die Reparaturkosten geltend gemacht werden können. Die
+                  Regulierung erfolgt oft ohne umfangreiche Gutachten, um den
+                  Prozess zu vereinfachen und Kosten zu sparen. Ein typisches
+                  Beispiel für einen Bagatellschaden ist eine kleine Delle an
+                  der Tür, verursacht durch das unvorsichtige Öffnen einer
+                  anderen Autotür, mit Reparaturkosten von etwa 600 Euro.
                 </p>
               </div>
             </div>
