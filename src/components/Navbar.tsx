@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.div className="navbar bg-base-100/70 backdrop-blur-md sticky top-0 z-50 drawer">
-      <div className="flex-1 ">
+      <div className="flex-1 lg:pl-4">
         <a href="/#" className="text-xl cursor-pointer">
           <Image
-            width={400}
+            width={300}
             height={200}
             src="/logo-dark.png"
-            className="mr-3 lg:w-96 w-64 transition-all duration-300"
+            className="mr-3 lg:w-80  w-64 transition-all duration-300"
             alt="Logo"
           />
         </a>
@@ -31,7 +31,7 @@ const Navbar = () => {
           href="mailto:info@dv-gutachten.de"
           className="btn transition-all duration-300 lg:flex hidden"
         >
-          <Mail /> <span>info@dv-gutachten.de</span>
+          <Mail /> <span>info@gutachten-dv.de</span>
         </a>
       </div>
       <div className="drawer-content">
